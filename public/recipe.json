@@ -1,0 +1,86 @@
+[
+    {
+        "recipe_img": "https://i0.wp.com/picjumbo.com/wp-content/uploads/korean-bibimbap-flatlay.jpg?w=600&quality=80",
+        "recipe_id": "12345",
+        "recipe_name": "Chicken Basil Stir-Fry",
+        "short_description": "A quick and flavorful chicken stir-fry with fresh basil and mushrooms.",
+        "ingredients": [
+            "550 g chicken",
+            "120 ml soy sauce",
+            "200 g basil leaf",
+            "400 g mushroom"
+        ],
+        "preparing_time": 20,
+        "calories": 320
+    },
+    {
+        "recipe_img": "https://www.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg",
+        "recipe_id": "12346",
+        "recipe_name": "Spaghetti Carbonara",
+        "short_description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+        "ingredients": [
+            "400 g spaghetti",
+            "200 g pancetta",
+            "2 large eggs",
+            "100 g parmesan cheese"
+        ],
+        "preparing_time": 50,
+        "calories": 450
+    },
+    {
+        "recipe_img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505",
+        "recipe_id": "12347",
+        "recipe_name": "Beef Tacos",
+        "short_description": "Tasty and easy-to-make beef tacos with fresh toppings.",
+        "ingredients": [
+            "500 g ground beef",
+            "8 taco shells",
+            "1 onion",
+            "2 tomatoes"
+        ],
+        "preparing_time": 40,
+        "calories": 390
+    },
+    {
+        "recipe_img": "https://picturetherecipe.com/wp-content/uploads/2020/07/Butter-Chicken-PTR-Featured-680x900.jpg",
+        "recipe_id": "12348",
+        "recipe_name": "Chicken Curry",
+        "short_description": "A flavorful and spicy chicken curry with a rich and creamy sauce.",
+        "ingredients": [
+            "500 g chicken breast",
+            "1 onion",
+            "2 garlic cloves",
+            "1 tbsp ginger"
+        ],
+        "preparing_time": 60,
+        "calories": 480
+    },
+    {
+        "recipe_img": "https://st2.depositphotos.com/3889193/7173/i/950/depositphotos_71739083-stock-photo-healthy-vegetarian-home-made-food.jpg",
+        "recipe_id": "12349",
+        "recipe_name": "Classic Pancakes",
+        "short_description": "Fluffy and delicious classic pancakes, perfect for a hearty breakfast.",
+        "ingredients": [
+            "200 g all-purpose flour",
+            "2 tbsp sugar",
+            "1 tsp baking powder",
+            "1/2 tsp baking soda"
+        ],
+        "preparing_time": 30,
+        "calories": 290
+    },
+    {
+        "recipe_img": "https://hips.hearstapps.com/hmg-prod/images/crepes-index-64347419e3c7a.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
+        "recipe_id": "12350",
+        "recipe_name": "Greek Salad",
+        "short_description": "A fresh and healthy Greek salad with tomatoes, cucumbers,",
+        "ingredients": [
+            "200 g cherry tomatoes",
+            "1 cucumber",
+            "1 red onion",
+            "100 g feta cheese"
+        ],
+        "preparing_time": 15,
+        "calories": 140
+    }
+]

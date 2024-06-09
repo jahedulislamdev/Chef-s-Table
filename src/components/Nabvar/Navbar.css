@@ -1,0 +1,7 @@
+.input-group textarea:focus,
+input:focus {
+    outline: 0;
+}
+.nav-link {
+    font-size: 19px;
+}
