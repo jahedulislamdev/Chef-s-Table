@@ -6,7 +6,7 @@ const Cook = ({ cook, handleCurrentlyCooking, currentlyCooking }) => {
         <div>
             <div className="card p-4 mb-5">
                 <div className="want-to-cook">
-                    <h4 className="text-center">Want To Cook {cook.length}</h4>
+                    <h4 className="text-center">Want To Cook: {cook.length}</h4>
                     <hr />
                     <div>
                         <table className="table table-bordered">
@@ -33,7 +33,9 @@ const Cook = ({ cook, handleCurrentlyCooking, currentlyCooking }) => {
                     </div>
                 </div>
                 <div className="currently-cooking mt-5">
-                    <h4 className="text-center">Currently Cooking {}</h4>
+                    <h4 className="text-center">
+                        Currently Cooking: {currentlyCooking.length}
+                    </h4>
                     <hr />
                     <div>
                         <table className="table table-bordered">
@@ -63,7 +65,5 @@ Cook.propTypes = {
     cook: PropTypes.array.isRequired,
     handleCurrentlyCooking: PropTypes.func,
     currentlyCooking: PropTypes.array.isRequired,
-    totalCalories: PropTypes.number,
-    time: PropTypes.number,
 };
 export default Cook;

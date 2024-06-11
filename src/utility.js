@@ -1,0 +1,2 @@
+const isSecondClick = () => {};
+export { isSecondClick };

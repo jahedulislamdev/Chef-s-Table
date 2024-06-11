@@ -1,7 +1,8 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 import Cook from "../wantToCook/Cook";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Recipes = () => {
     // feaching json fake data
     const [recipe, setRecipe] = useState([]);
@@ -13,25 +14,45 @@ const Recipes = () => {
     // cooking state and click handler
     const [cook, setCook] = useState([]);
     const handlePreparing = (newItem) => {
-        const newRecipe = [...cook, newItem];
-        setCook(newRecipe);
+        // check this element already exist or not is my array
+        const isAlreadyInCart = cook.some(
+            (item) => item.recipe_id === newItem.recipe_id,
+        );
+        if (isAlreadyInCart) {
+            toast.error("Item Already Exist", {
+                autoClose: 1000,
+                position: "top-right",
+            });
+            return;
+        } else {
+            toast.success("Item Added Successfully", {
+                autoClose: 2000,
+                position: "top-right",
+            });
+        }
+        setCook([...cook, newItem]);
     };
-    // Total time and calories addition state declear
-    // const [time, setTime] = useState(0);
-    // const [totalCalories, setTotalCalories] = useState(0);
     // currently cooking state and preparing click handler
     const [currentlyCooking, SetCurrentlyCooking] = useState([]);
     const handleCurrentlyCooking = (item) => {
+        // add delete item to currently cooking table
+        const isAlreadyInCooking = currentlyCooking.some(
+            (newRecipe) => newRecipe.recipe_id === item.recipe_id,
+        );
+        if (isAlreadyInCooking) {
+            toast.warning("Opps! Item Currently Cooking", {
+                autoClose: 1000,
+                position: "top-right",
+                theme: "colored",
+            });
+            return;
+        }
         // delete want to cook item
         const remaining = cook.filter((idx) => idx !== item);
         setCook(remaining);
-        // add delete item to currently cooking table
-        const newItem = [...currentlyCooking, item];
-        SetCurrentlyCooking(newItem);
-        // total calories and total time addition
-        // setTotalCalories(totalCalories + item);
-        // setTime(time + item);
-        // console.log(item, "this");
+
+        // push item in currentlyCooking
+        SetCurrentlyCooking([...currentlyCooking, item]);
     };
     return (
         <div className="row mt-5">
@@ -45,6 +66,7 @@ const Recipes = () => {
                         ></Recipe>
                     ))}
                 </div>
+                <ToastContainer />
             </div>
             <div className="col-5">
                 <Cook
