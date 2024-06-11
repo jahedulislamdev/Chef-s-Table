@@ -35,6 +35,9 @@ const Recipes = () => {
     // currently cooking state and preparing click handler
     const [currentlyCooking, SetCurrentlyCooking] = useState([]);
     const handleCurrentlyCooking = (item) => {
+        // delete want to cook item
+        const remaining = cook.filter((idx) => idx !== item);
+        setCook(remaining);
         // add delete item to currently cooking table
         const isAlreadyInCooking = currentlyCooking.some(
             (newRecipe) => newRecipe.recipe_id === item.recipe_id,
@@ -47,10 +50,6 @@ const Recipes = () => {
             });
             return;
         }
-        // delete want to cook item
-        const remaining = cook.filter((idx) => idx !== item);
-        setCook(remaining);
-
         // push item in currentlyCooking
         SetCurrentlyCooking([...currentlyCooking, item]);
     };
